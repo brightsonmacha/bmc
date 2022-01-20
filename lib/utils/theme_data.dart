@@ -2,15 +2,15 @@ import 'package:bmc/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 ThemeData themeData = ThemeData(
-  primarySwatch: primaryColor,
-  fontFamily: fontFamily,
+  primarySwatch: kPrimaryColor,
+  fontFamily: kFontFamily,
 
-  scaffoldBackgroundColor: primaryColor,
+  scaffoldBackgroundColor: kPrimaryColor,
 
 
 );
 
 
 ThemeData darkTheme = ThemeData(
-  primarySwatch: primaryColor,
+  primarySwatch: kPrimaryColor,
 );

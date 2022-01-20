@@ -19,7 +19,7 @@ class BmCalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'BM Calculator',
+      title: 'BMI Calculator',
       theme: themeData,
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,

@@ -15,14 +15,15 @@ class IconAndText extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: whiteColor,
+          color: kWhiteColor,
           size: 90.0,
         ),
         Text(
           title,
           style: TextStyle(
-            color: whiteColor,
-            fontSize: 20.0,
+            color: kWhiteColor,
+            fontSize: 18.0,
+            fontWeight: FontWeight.bold,
             letterSpacing: 2.0,
           ),
         ),

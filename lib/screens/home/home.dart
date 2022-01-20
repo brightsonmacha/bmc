@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBarCustom(
-        appTitle: "BM CALCULATOR",
+        appTitle: "BMI CALCULATOR",
         leadIcon: Icons.menu,
         onPressIcon: () {},
       ),

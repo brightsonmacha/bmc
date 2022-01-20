@@ -19,14 +19,14 @@ class ButtonToNavigate extends StatelessWidget {
         height: _size.height * 0.08,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: secondaryColor,
+          color: pSecondaryColor,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
           child: Text(
             btnText,
             style: TextStyle(
-              color: whiteColor,
+              color: kWhiteColor,
               letterSpacing: 2.0,
               fontWeight: FontWeight.bold,
               fontSize: 18.0

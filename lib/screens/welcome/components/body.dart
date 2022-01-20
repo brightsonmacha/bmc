@@ -12,16 +12,16 @@ class BodyWelcome extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           RefreshProgressIndicator(
-            backgroundColor: whiteColor,
+            backgroundColor: kWhiteColor,
           ),
           const SizedBox(
             height: 40.0,
           ),
           Center(
             child: Text(
-              "BM CALCULATOR",
+              "BMI CALCULATOR",
               style: TextStyle(
-                color: whiteColor,
+                color: kWhiteColor,
                 letterSpacing: 2.0,
                 fontSize: 20.0,
               ),

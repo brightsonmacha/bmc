@@ -14,7 +14,7 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarCustom(
-        appTitle : "BM RESULT",
+        appTitle : "BMI RESULT",
         leadIcon: Icons.arrow_back_ios,
         onPressIcon: (){
           Navigator.pop(context);
