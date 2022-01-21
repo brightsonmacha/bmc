@@ -1,5 +1,5 @@
 import 'package:bmc/utils/constant.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 //AppBar
 TextStyle appBarStyle = const TextStyle(
@@ -20,4 +20,11 @@ TextStyle kStyleSmallCardBigTxt = TextStyle(
   letterSpacing: 2.0,
   fontWeight: FontWeight.bold,
   fontSize: 50.0,
+);
+
+TextStyle kStyleSmallCardBigTxtDesc = TextStyle(
+  color: kWhiteColor,
+  letterSpacing: 2.0,
+  fontWeight: FontWeight.bold,
+  fontSize: 18.0,
 );

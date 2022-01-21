@@ -5,8 +5,11 @@ class IconAndText extends StatelessWidget {
   final IconData icon;
   final String title;
 
-  const IconAndText({Key? key, required this.icon, required this.title})
-      : super(key: key);
+  const IconAndText({
+    Key? key,
+    required this.icon,
+    required this.title,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

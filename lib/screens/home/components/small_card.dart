@@ -4,7 +4,11 @@ class SmallCard extends StatelessWidget {
   final Widget child;
   final Color backgroundColor;
 
-  const SmallCard({Key? key, required this.child, required this.backgroundColor}) : super(key: key);
+  const SmallCard({
+    Key? key,
+    required this.child,
+    required this.backgroundColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

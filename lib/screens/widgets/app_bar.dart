@@ -1,12 +1,17 @@
 import 'package:bmc/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class AppBarCustom extends StatelessWidget implements PreferredSizeWidget{
+class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   final String appTitle;
   final IconData leadIcon;
   final Function() onPressIcon;
 
-  const AppBarCustom({Key? key, required this.appTitle, required this.leadIcon, required this.onPressIcon} ) : super(key: key);
+  const AppBarCustom({
+    Key? key,
+    required this.appTitle,
+    required this.leadIcon,
+    required this.onPressIcon,
+  }) : super(key: key);
 
   @override
   PreferredSizeWidget build(BuildContext context) {
