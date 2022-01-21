@@ -3,6 +3,8 @@ import 'package:bmc/screens/home/components/btn_small_rnd.dart';
 import 'package:bmc/screens/home/components/icon_text.dart';
 import 'package:bmc/screens/home/components/small_card.dart';
 import 'package:bmc/screens/home/components/small_card_body.dart';
+import 'package:bmc/screens/result/result.dart';
+import 'package:bmc/services/bmi_calculator.dart';
 import 'package:bmc/services/enums/gender.dart';
 import 'package:bmc/utils/constant.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +24,10 @@ class _BodyHomeState extends State<BodyHome> {
   int _age = 23;
 
   void activateCard(Enum value) {
-    if(value == Gender.MALE){
+    if (value == Gender.MALE) {
       _activeCardMale = kAncientColorActive;
       _activeCardFemale = kAncientColor;
-    }else{
+    } else {
       _activeCardFemale = kAncientColorActive;
       _activeCardMale = kAncientColor;
     }
@@ -42,7 +44,7 @@ class _BodyHomeState extends State<BodyHome> {
               children: [
                 Expanded(
                   child: GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         activateCard(Gender.MALE);
                       });
@@ -58,7 +60,7 @@ class _BodyHomeState extends State<BodyHome> {
                 ),
                 Expanded(
                   child: GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         activateCard(Gender.FEMALE);
                       });
@@ -101,7 +103,7 @@ class _BodyHomeState extends State<BodyHome> {
                     child: Slider(
                       value: _height.toDouble(),
                       min: 10,
-                      max: 200,
+                      max: 250,
                       onChanged: (double value) {
                         setState(() {
                           _height = value.round();
@@ -192,8 +194,19 @@ class _BodyHomeState extends State<BodyHome> {
           ButtonToNavigate(
             btnText: "CALCULATE YOUR BMI",
             backColor: kSecondaryColor,
-            onPressed: (){
-              Navigator.pushNamed(context, '/result');
+            onPressed: () {
+              BmiCalculator bmi = BmiCalculator(_weight, _height);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(
+                    bmiDescription: bmi.getBmiDescription(),
+                    bmiRange: bmi.getBmiRange(),
+                    bmiStatus: bmi.getBmiStatus(),
+                    bmiValue: bmi.getBmiValue(),
+                  ),
+                ),
+              );
             },
           ),
         ],

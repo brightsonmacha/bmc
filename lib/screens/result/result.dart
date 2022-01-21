@@ -3,7 +3,18 @@ import 'package:bmc/screens/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatefulWidget {
-  const ResultPage({Key? key}) : super(key: key);
+  final String bmiValue;
+  final String bmiStatus;
+  final String bmiRange;
+  final String bmiDescription;
+
+  const ResultPage(
+      {Key? key,
+      required this.bmiValue,
+      required this.bmiStatus,
+      required this.bmiRange,
+      required this.bmiDescription})
+      : super(key: key);
 
   @override
   _ResultPageState createState() => _ResultPageState();
@@ -20,7 +31,12 @@ class _ResultPageState extends State<ResultPage> {
           Navigator.pop(context);
         },
       ),
-      body: const ResultBody(),
+      body: ResultBody(
+        bmiValue: widget.bmiValue,
+        bmiStatus: widget.bmiStatus,
+        bmiRange: widget.bmiRange,
+        bmiDescription: widget.bmiDescription,
+      ),
     );
   }
 }

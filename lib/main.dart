@@ -1,5 +1,4 @@
 import 'package:bmc/screens/home/home.dart';
-import 'package:bmc/screens/result/result.dart';
 import 'package:bmc/screens/welcome/welcome.dart';
 import 'package:bmc/utils/theme_data.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +27,6 @@ class BmCalculator extends StatelessWidget {
       routes: {
         '/': (context) => const WelcomeScreen(),
         '/home': (context) => const HomeScreen(),
-        '/result': (context) => const ResultPage()
       },
     );
   }

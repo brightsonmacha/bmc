@@ -5,7 +5,18 @@ import 'package:bmc/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class ResultBody extends StatelessWidget {
-  const ResultBody({Key? key}) : super(key: key);
+  final String bmiStatus;
+  final String bmiValue;
+  final String bmiRange;
+  final String bmiDescription;
+
+  const ResultBody(
+      {Key? key,
+      required this.bmiStatus,
+      required this.bmiValue,
+      required this.bmiRange,
+      required this.bmiDescription})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,16 +42,16 @@ class ResultBody extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      const Text(
-                        "NORMAL",
+                      Text(
+                        bmiStatus.toUpperCase(),
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.green,
                           fontSize: 22.0,
                         ),
                       ),
                       Text(
-                        "56.0",
+                        bmiValue,
                         textAlign: TextAlign.center,
                         style: kStyleSmallCardBigTxt,
                       ),
@@ -49,19 +60,19 @@ class ResultBody extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "Normal BMI range",
+                        "BMI Range",
                         textAlign: TextAlign.center,
                         style: kStyleSmallCardSmallTxt,
                       ),
                       Text(
-                        "18.2 - 23 kg/m2",
+                        bmiRange + " kg/m2",
                         textAlign: TextAlign.center,
                         style: kStyleSmallCardSmallTxt,
                       ),
                     ],
                   ),
                   Text(
-                    "You have normal body weight.Good job!",
+                    bmiDescription,
                     style: kStyleSmallCardSmallTxt,
                     softWrap: true,
                     textAlign: TextAlign.center,
