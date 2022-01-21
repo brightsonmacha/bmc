@@ -1,4 +1,4 @@
-name: bmic
+name: bmc
 description: Body Mass Calculator
 
 publish_to: 'none'
