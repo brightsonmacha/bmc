@@ -26,21 +26,21 @@ flutter:
   uses-material-design: true
 
   assets:
-    - lib/assets/images/
+    - assets/images/
 
   fonts:
     - family: Poppins
       fonts:
-        - asset:  lib/assets/fonts/Poppins-Black.ttf
+        - asset:  assets/fonts/Poppins-Black.ttf
           weight: 800
-        - asset:  lib/assets/fonts/Poppins-Bold.ttf
+        - asset:  assets/fonts/Poppins-Bold.ttf
           weight: 700
-        - asset:  lib/assets/fonts/Poppins-Light.ttf
+        - asset:  assets/fonts/Poppins-Light.ttf
           weight: 400
-        - asset:  lib/assets/fonts/Poppins-LightItalic.ttf
+        - asset:  assets/fonts/Poppins-LightItalic.ttf
           style:  italic
           weight: 400
-        - asset:  lib/assets/fonts/Poppins-Light.ttf
+        - asset:  assets/fonts/Poppins-Light.ttf
           weight: 400
-        - asset:  lib/assets/fonts/Poppins-Thin.ttf
+        - asset:  assets/fonts/Poppins-Thin.ttf
           weight: 200
